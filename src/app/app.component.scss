@@ -1,0 +1,80 @@
+
+$background-base: #121212;
+$background-highlight: #1a1a1a;
+$background-press: #000;
+$background-elevated-base: #242424;
+$background-elevated-highlight: #2a2a2a;
+$background-elevated-press: #000;
+$background-tinted-base: hsla(0,0%,100%,.07);
+$background-tinted-highlight: hsla(0,0%,100%,.1);
+$background-tinted-press: hsla(0,0%,100%,.04);
+$background-unsafe-for-small-text-base: #121212;
+$background-unsafe-for-small-text-highlight: #121212;
+$background-unsafe-for-small-text-press: #121212;
+$text-base: #fff;
+$text-subdued: #a7a7a7;
+$text-bright-accent: #1ed760;
+$text-negative: #f15e6c;
+$text-warning: #ffa42b;
+$text-positive: #1ed760;
+$text-announcement: #3d91f4;
+$essential-base: #fff;
+$essential-subdued: #727272;
+$essential-bright-accent: #1ed760;
+$essential-negative: #e91429;
+$essential-warning: #ffa42b;
+$essential-positive: #1ed760;
+$essential-announcement: #0d72ea;
+$decorative-base: #fff;
+$decorative-subdued: #292929;
+$white: #F8F8F8;
+
+router-outlet{
+    background-color: red;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .content {
+    // height: calc(100vh - 90px - 64px);
+    margin-top: 64px;
+    margin-bottom: 90px;
+    padding: 20px;
+    // overflow-y: scroll;
+  }
+
+  // .content::-webkit-scrollbar{
+  //   width: 4px;
+  //   background: yellow;
+  //   -webkit-border-radius: 2px;
+  //   border-radius: 2px;
+  // }
+  
+
+  ::ng-deep {
+    ng-scrollbar.ngx-scroll {
+  
+      --scrollbar-size: 8px;
+      --scrollbar-thumb-color: $white;
+      --scrollbar-thumb-hover-color: $white;
+      --scrollbar-color:  rgba(0, 0, 0, 0.15);
+      --scrollbar-border-radius: 4px;
+      // max-height: 200px;
+      border-radius: 3px;
+      border: 2px solid rgba(0, 0, 0, 0.05);
+  
+      .white-scrollbars {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.5);
+        background :rgb(245, 245, 245);
+      }
+  
+      .ng-scrollbar {
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), inset 0 0 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.5);
+      }
+  
+    }
+  }

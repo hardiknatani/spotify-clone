@@ -1,0 +1,15 @@
+<mat-toolbar  class="footer " [ngClass]="{auth:!isLoggedIn}">
+<div fxFlex fxLayout="row" fxLayoutAlign="space-between center"   *ngIf="!isLoggedIn"  >
+<div fxLayout="column" fxLayoutAlign="space-evenly" >
+    <p>
+        Preview of Spotify
+    </p>
+    <p>
+        Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+    </p>
+</div>
+<button mat-raised-button href="/signup" id="signup" >Sign up free</button>
+</div>
+    
+
+</mat-toolbar>

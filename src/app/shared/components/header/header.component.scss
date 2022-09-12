@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    width: calc(100vw - 200px);
+    flex-direction: row;
+    justify-content:space-between ;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    height: 64px;
+  }
+  
+  .auth{
+    display: flex;
+    flex-direction: row;
+    gap:1vw;
+  }
+  #login{
+    background-color: white;
+    color: black;
+    border-radius: 5rem;
+  }
+
+  // .example-spacer {
+  //   flex: 1 1 auto;
+  // }

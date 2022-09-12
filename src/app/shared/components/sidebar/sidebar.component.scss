@@ -1,0 +1,19 @@
+$black:#191414;
+$green:#1DB954;
+
+
+.sidenav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: $black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+ 
+}
+
+.img-logo{
+    width: inherit;
+}

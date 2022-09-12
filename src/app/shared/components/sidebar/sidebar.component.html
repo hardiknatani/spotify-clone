@@ -1,0 +1,25 @@
+<div id="sidenav-main" >
+  <mat-sidenav-container class="example-container">
+
+    <mat-sidenav #sidenav mode="side" opened class="sidenav" [fixedInViewport]="true" [fixedTopGap]="0"
+      [fixedBottomGap]="90">
+  
+      <img src="../../assets/Spotify_Logo_CMYK_White.png" class="img-logo" alt="">
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]="'/home'">
+          <i-feather name="home"></i-feather>
+          Home
+        </a>
+        <a mat-list-item [routerLink]="'/search'">
+          <i-feather name="search"></i-feather>
+          Search
+        </a>
+        <a mat-list-item [routerLink]="'/library'">
+          <i-feather name="folder"></i-feather> Your Library
+        </a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
