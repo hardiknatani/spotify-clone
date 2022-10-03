@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-player',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-  isLoggedIn=false;
-  constructor() { }
+  isLoggedIn!:boolean;
+  constructor(private authService:AuthService) { 
+    this.authService.authSubject.subscribe(res=>{
+      this.isLoggedIn=res
+    })
+  }
 
   ngOnInit(): void {
+
   }
 
 }

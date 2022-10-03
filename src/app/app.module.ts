@@ -15,6 +15,10 @@ import {IconsModule } from './shared/modules/icons/icons.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import * as bootstrap from "bootstrap"
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './shared/services/api-service.service';
+import { AuthService } from './shared/services/auth.service';
+import { AuthGaurdService } from './shared/services/auth-gaurd.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +35,14 @@ import * as bootstrap from "bootstrap"
     BrowserAnimationsModule,
     IconsModule,
     FlexLayoutModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    AuthService,
+    AuthGaurdService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

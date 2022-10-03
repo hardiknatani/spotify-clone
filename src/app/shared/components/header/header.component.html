@@ -5,7 +5,12 @@
 </div>
     <!-- <span class="example-spacer"></span> -->
 <div class="auth"  >
-    <button mat-button href="/signup" id="signup" >Sign Up</button>
-    <button mat-raised-button href="/login" id="login" >Log in</button>
+    <button mat-button  id="signup" >Sign Up</button>
+    <button  *ngIf="!isAuthenticated" mat-raised-button  id="login"  routerLink="/login" >
+        <!-- <a [href]="redirectUrl">Log in</a> --> Log in
+    </button>
+    <button  *ngIf="isAuthenticated" mat-raised-button  id="login"  (click)="logout()" >
+        <!-- <a [href]="redirectUrl">Log in</a> --> logout
+    </button>
 </div>
-</mat-toolbar>
+</mat-toolbar>  

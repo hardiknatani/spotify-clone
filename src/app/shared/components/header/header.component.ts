@@ -1,15 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Injector } from '@angular/core';
+import { AppComponentBase } from '../AppComponentBase';
+import { AppConsts } from '../../appConstants';
+import { environment } from 'src/environments/environment';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent extends AppComponentBase implements OnInit {
 
-  constructor() { }
+isAuthenticated!:boolean
+
+
+  constructor(injector: Injector,public authService:AuthService) {
+    super(injector)
+    this.authService.authSubject.subscribe(res=>{
+    this.isAuthenticated=res
+    })
+   }
 
   ngOnInit(): void {
+    this.authService.authSubject.subscribe(res=>{
+    this.isAuthenticated=res
+    })
   }
+
+  logout(){
+    this.authService.logout();
+    this.authService.authSubject.subscribe(res=>{
+      this.isAuthenticated=res
+      })
+  }
+
+
 
 }
