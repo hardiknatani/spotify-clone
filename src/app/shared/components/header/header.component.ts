@@ -27,6 +27,10 @@ isAuthenticated!:boolean
     })
   }
 
+  login(){
+    this.authService.spotifySignIn()
+  }
+
   logout(){
     this.authService.logout();
     this.authService.authSubject.subscribe(res=>{

@@ -15,9 +15,7 @@ const routes: Routes =
   { path: 'library',
   canActivate:[AuthGaurdService],
    loadChildren: () => import('./library/library.module').then(m => m.LibraryModule) },
-                      
-  { path: 'login',
-   loadChildren: () => import('./shared/components/login/login.module').then(m => m.LoginModule) }];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

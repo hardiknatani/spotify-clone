@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/services/api-service.service';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGaurdService } from './shared/services/auth-gaurd.service';
+import { CardComponent } from './shared/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AuthGaurdService } from './shared/services/auth-gaurd.service';
     HeaderComponent,
     SidebarComponent,
     PlayerComponent,
+    CardComponent,
 
   ],
   imports: [

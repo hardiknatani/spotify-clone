@@ -6,7 +6,7 @@
     <!-- <span class="example-spacer"></span> -->
 <div class="auth"  >
     <button mat-button  id="signup" >Sign Up</button>
-    <button  *ngIf="!isAuthenticated" mat-raised-button  id="login"  routerLink="/login" >
+    <button  *ngIf="!isAuthenticated" mat-raised-button  id="login" (click)="login()"  >
         <!-- <a [href]="redirectUrl">Log in</a> --> Log in
     </button>
     <button  *ngIf="isAuthenticated" mat-raised-button  id="login"  (click)="logout()" >

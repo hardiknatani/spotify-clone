@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-// import { AuthenticationService } from 'src/app/core/services/auth.service';
+import { AuthService } from './auth.service';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 // import { SnackBarService } from '../snackBarService/snack-bar.service';
@@ -14,21 +14,23 @@ export class ApiService {
 
   options: any;
   constructor(private http: HttpClient,
-    //  private authenticationService: AuthenticationService,
+    private authService:AuthService
     //  private notification: SnackBarService
      ) { }
 
   private getHeader() {
-    // var token = this.authenticationService.currentUserToken.token
+    var token = "Bearer " + this.authService.currentUser()
+
+
     this.headers = new HttpHeaders({
-      'Authorization': 'Bearer ',
-      //  +  token
-      'Access-Control-Allow-Origin':"*"
+      'Authorization': token,
     });
     this.options = {
       headers: this.headers,
     };
   }
+
+
   get(apiEndPoint: string): Observable<any> {
     this.getHeader();
     return this.http.get(apiEndPoint, this.options).pipe(retry(3), catchError(error => this.handleError(error)));
