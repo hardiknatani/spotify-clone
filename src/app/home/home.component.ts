@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../shared/services/api-service.service';
+import { CardComponent } from '../shared/components/card/card.component';
+import { Card } from '../shared/components/card/card.model';
+import { elementAt } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -15,9 +19,15 @@ export class HomeComponent implements OnInit {
     private _activatedRoute: ActivatedRoute
   ) { }
 
+   playlists:Card[]=[];
+
   ngOnInit(): void {
-this.apiService.get('	https://api.spotify.com/v1/users/me/playlists?offset=5&limit=10').subscribe(res=>{
+this.apiService.get('	https://api.spotify.com/v1/me/playlists?offset=5&limit=10').subscribe(res=>{
   console.log(res)
+  res.items.map((ele:any)=>{
+    this.playlists.push(new Card(ele.images[0]['url'],ele.name, ele.description))
+  })
+
 })
     
 }

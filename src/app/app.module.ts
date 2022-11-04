@@ -27,7 +27,6 @@ import { CardComponent } from './shared/components/card/card.component';
     HeaderComponent,
     SidebarComponent,
     PlayerComponent,
-    CardComponent,
 
   ],
   imports: [
