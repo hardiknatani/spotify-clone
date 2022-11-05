@@ -3,8 +3,12 @@
 
 /* You can add global styles to this file, and also import other style files */
 
+
 @use '../node_modules/@angular/material' as mat;
 
+@import '../node_modules/tailwindcss/base.css';
+@import '../node_modules/tailwindcss/components.css';
+@import '../node_modules/tailwindcss/utilities.css';
 @import "@angular/material/theming";
 
 @include mat.core();

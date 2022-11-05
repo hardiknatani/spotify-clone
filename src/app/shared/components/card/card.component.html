@@ -1,9 +1,7 @@
-<mat-card >
-
-    <img mat-card-image src={{cardDetails.imageUrl}} alt="Photo of a Shiba Inu">
-    <mat-card-title>{{cardDetails.title}}</mat-card-title>
-    <mat-card-content>
-     <p>{{cardDetails.description}}</p>
-
-    </mat-card-content>
-  </mat-card>
+<mat-card class="max-w-xs p-4 " >
+<div >
+    <img  [src]="card?.imageUrl"  mat-card-image>
+    <mat-card-title>{{card?.title}}</mat-card-title>
+    <mat-card-subtitle class="truncate ..." >{{card?.description}}</mat-card-subtitle>
+</div>
+</mat-card>

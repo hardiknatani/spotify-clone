@@ -19,14 +19,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/services/api-service.service';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGaurdService } from './shared/services/auth-gaurd.service';
-import { CardComponent } from './shared/components/card/card.component';
+import { CardModule } from './shared/components/card/card.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    PlayerComponent,
+    PlayerComponent
 
   ],
   imports: [
@@ -37,7 +37,8 @@ import { CardComponent } from './shared/components/card/card.component';
     IconsModule,
     FlexLayoutModule,
     NgScrollbarModule,
-    HttpClientModule
+    HttpClientModule,
+    CardModule
   ],
   providers: [
     ApiService,

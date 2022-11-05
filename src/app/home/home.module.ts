@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { CardModule } from '../shared/components/card/card.module';
 
 
 
@@ -15,6 +16,7 @@ import { HomeComponent } from './home.component';
     CommonModule,
     HomeRoutingModule,
     FlexLayoutModule,
+    CardModule
     // CardComponent
   ]
 })
