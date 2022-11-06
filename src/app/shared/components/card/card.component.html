@@ -1,7 +1,9 @@
-<mat-card class="max-w-xs p-4 " >
-<div >
-    <img  [src]="card?.imageUrl"  mat-card-image>
-    <mat-card-title>{{card?.title}}</mat-card-title>
-    <mat-card-subtitle class="truncate ..." >{{card?.description}}</mat-card-subtitle>
-</div>
-</mat-card>
+<mat-card class=" min-w-40 min-h-full max-w-[10rem] p-3 " >
+    <div >
+        <img class=" m-0 p-0 rounded " [src]="card?.imageUrl" mat-card-image >
+    <div class="pt-2" >
+        <mat-card-subtitle class="truncate text-white font-bold" >{{card?.title}}</mat-card-subtitle>
+        <p class=" text-slate-50 max-w-4 line-clamp-2" >{{(card!.description)?(card!['description']):'By Hardik Natani'}}</p>
+    </div>
+    </div>
+    </mat-card> 

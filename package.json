@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@ngneat/tailwind": "^7.0.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/bootstrap": "^5.2.4",
     "angular-feather": "^6.5.0",
     "bootstrap": "^5.2.1",
